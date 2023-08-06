@@ -26,7 +26,7 @@ class App {
       this.images[i].onload = this.done.push(i);
 
       if (this.done.length >= 3) {
-        this.svg.style.display = "block";
+        this.svg.style.opacity = 1;
       }
     }
 
