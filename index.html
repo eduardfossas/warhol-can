@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andy Warhol Can</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: bisque;
+      }
+
+      svg {
+        max-height: 100%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+
+      .group {
+        transform-origin: 200px 566px !important;
+      }
+    </style>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "gsap": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+          "three/examples/": "https://unpkg.com/three@0.153.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <svg
+      viewBox="0 0 1080 1920"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      js-inter
+    >
+      <g class="group">
+        <image
+          x="259"
+          y="676"
+          width="557"
+          height="621"
+          class="war"
+          href="./war.png"
+        />
+
+        <image x="194" y="445" width="692" height="1132" href="./bot.png" />
+
+        <image
+          x="200"
+          y="492"
+          width="686"
+          height="176"
+          class="top"
+          href="./top.png"
+        />
+      </g>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="./tone.min.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
