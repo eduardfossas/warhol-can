@@ -12,6 +12,8 @@ class App {
     this.tl = gsap.timeline();
     this.opening = new Tone.Player("./can.mp3").toDestination();
     this.empty = new Tone.Player("./empty.mp3").toDestination();
+    this.images = document.querySelectorAll("image");
+    this.done = [];
     this.played = false;
     this.clicked = false;
 
@@ -19,6 +21,14 @@ class App {
     this.svg = document.querySelector("svg");
     this.top = document.querySelector(".top");
     this.war = document.querySelector(".war");
+
+    for (let i = 0; i < this.images.length; i++) {
+      this.images[i].onload = this.done.push(i);
+
+      if (this.done.length >= 3) {
+        this.svg.style.display = "block";
+      }
+    }
 
     this.svg.addEventListener("pointerdown", async () => {
       if (!this.clicked) {
